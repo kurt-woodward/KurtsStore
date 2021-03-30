@@ -13,3 +13,4 @@ Placeholder
   dotnet new xunit -o KurtsStore/SportlandSports.Tests  
   dotnet add KurtsStore/SportlandSports.Tests reference KurtsStore/SportlandSports  
 ```
+![Screenshot of the first run of the app](STA_421_Lab_1B_Configure_and_Build.JPG)
