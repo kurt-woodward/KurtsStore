@@ -13,5 +13,8 @@ Placeholder
   dotnet new xunit -o KurtsStore/SportlandSports.Tests  
   dotnet add KurtsStore/SportlandSports.Tests reference KurtsStore/SportlandSports  
 ```
-## Screenshot of First Run  
-![Screenshot 1](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/ISTA_421_Lab_1B_Configure_and_Build.JPG "Screenshot 1")
+## Screenshots
+### Configure and Build  
+![Screenshot 1](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_1B_Configure_and_Build.JPG "Screenshot 1")
+### Connect to Database  
+![Screenshot 2](https://raw.githubusehttps://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_1B_Connect_to_Database.JPG "Screenshot 2")
