@@ -12,6 +12,34 @@ namespace SportlandSports.Tests
     public class ProductionControllerTests
     {
         [Fact]
+        public void Can_Filter_Products()
+        {
+            // Arrange
+            // - create the mock repo
+            Mock<IStoreRepository> mock = new Mock<IStoreRepository>();
+            mock.Setup(m => m.Products).Returns((new Product[]
+                {
+                new Product { ProductId = 1, Name = "P1", Category = "Cat1" },
+                new Product { ProductId = 2, Name = "P2", Category = "Cat2" },
+                new Product { ProductId = 3, Name = "P3", Category = "Cat1" },
+                new Product { ProductId = 4, Name = "P4", Category = "Cat2" },
+                new Product { ProductId = 5, Name = "P5", Category = "Cat3" } 
+                }).AsQueryable<Product>());
+
+            // Arrange - Create a controller and make the page size 3 items
+            HomeController controller = new HomeController(mock.Object);
+            controller.PageSize = 3;
+
+            // Action
+            Product[] result = (controller.Index("Cat2", 1).ViewData.Model as ProductsListViewModel).Products.ToArray();
+
+            // Assert
+            Assert.Equal(2, result.Length);
+            Assert.True(result[0].Name == "P2" && result[0].Category == "Cat2");
+            Assert.True(result[0].Name == "P4" && result[1].Category == "Cat2");
+        }
+
+        [Fact]
         public void Can_Use_Repository()
         {
             // Arrange
@@ -25,7 +53,7 @@ namespace SportlandSports.Tests
             HomeController controller = new HomeController(mock.Object);
 
             // Act
-            ProductsListViewModel result = controller.Index().ViewData.Model as ProductsListViewModel;
+            ProductsListViewModel result = controller.Index(null).ViewData.Model as ProductsListViewModel;
 
             // Assert
             Product[] prodArray = result.Products.ToArray();
@@ -52,7 +80,7 @@ namespace SportlandSports.Tests
             controller.PageSize = 3;
 
             // Act
-            ProductsListViewModel result = controller.Index(2).ViewData.Model as ProductsListViewModel;
+            ProductsListViewModel result = controller.Index(null, 2).ViewData.Model as ProductsListViewModel;
 
             // Assert
             Product[] prodArray = result.Products.ToArray();
@@ -79,7 +107,7 @@ namespace SportlandSports.Tests
             HomeController controller = new HomeController(mock.Object) { PageSize = 3 };
 
             // Act
-            ProductsListViewModel result = controller.Index(2).ViewData.Model as ProductsListViewModel;
+            ProductsListViewModel result = controller.Index(null, 2).ViewData.Model as ProductsListViewModel;
 
             // Assert
             PagingInfo pageInfo = result.PagingInfo;
