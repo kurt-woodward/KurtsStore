@@ -11,10 +11,13 @@ The purpose of this assignment is to demonstrate to the student how C# business 
   dotnet new xunit -o KurtsStore/SportlandSports.Tests  
   dotnet add KurtsStore/SportlandSports.Tests reference KurtsStore/SportlandSports  
 ```
-## Screenshots
+## Chapter 7 Screenshots  
 ### Configure and Build  
 ![Screenshot 1](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_1B_Configure_and_Build.JPG "Screenshot 1")
 ### Connect to Database  
 ![Screenshot 2](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_1B_Connect_to_Database.JPG "Screenshot 2")
 ### Display the Products
 ![Screenshot 3](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_1B_Display_the_Products.JPG "Screenshot 3")  
+## Chapter 8 Screenshots  
+### Filter by Category, Category Selected
+![Screenshot 1](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Filter_by_Category.JPG "Screenshot 4")  
