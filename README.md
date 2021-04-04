@@ -20,4 +20,8 @@ The purpose of this assignment is to demonstrate to the student how C# business 
 ![Screenshot 3](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_1B_Display_the_Products.JPG "Screenshot 3")  
 ## Chapter 8 Screenshots  
 ### Filter by Category, Category Selected
-![Screenshot 1](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Filter_by_Category.JPG "Screenshot 4")  
+![Screenshot 4](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Filter_by_Category.JPG "Screenshot 4")  
+### Add Shopping Cart
+![Screenshot 5](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Add_Shopping_Cart.JPG "Screenshot 5")  
+### Shopping Cart with Session Data
+![Screenshot 6](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Shopping_Cart_with_Session_Data.JPG "Screenshot 6")  
