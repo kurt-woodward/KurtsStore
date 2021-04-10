@@ -27,3 +27,12 @@ The purpose of this assignment is to demonstrate to the student how C# business 
 ![Screenshot 6](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Shopping_Cart_with_Session_Data.JPG "Screenshot 6")  
 ### Test Explorer Results
 ![Screenshot 7](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_2A_Test_Explorer_Results.JPG "Screenshot 7")  
+## Chapter 9 Screenshots  
+### Remove Items  
+![Screenshot 8](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_3A_Add_Remove_Button.JPG "Screenshot 8")  
+### Checkout Info  
+![Screenshot 9](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_3A_Add_Checkout.JPG "Screenshot 9")  
+### Checkout Complete  
+![Screenshot 10](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_3A_Checkout_Complete.JPG "Screenshot 10")  
+### Test Explorer Results  
+![Screenshot 11](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_3A_Test_Explorer_Results.JPG "Screenshot 11")  
