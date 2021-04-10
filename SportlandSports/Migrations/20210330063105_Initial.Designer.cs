@@ -8,7 +8,7 @@ using SportlandSports.Models;
 
 namespace SportlandSports.Migrations
 {
-    [DbContext(typeof(StoreDBContext))]
+    [DbContext(typeof(StoreDbContext))]
     [Migration("20210330063105_Initial")]
     partial class Initial
     {
@@ -22,7 +22,7 @@ namespace SportlandSports.Migrations
 
             modelBuilder.Entity("SportlandSports.Models.Product", b =>
                 {
-                    b.Property<long>("ProductId")
+                    b.Property<long>("ProductID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -39,7 +39,7 @@ namespace SportlandSports.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(8,2)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("ProductID");
 
                     b.ToTable("Products");
                 });

@@ -11,52 +11,54 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using SportlandSports.Models;
 
-namespace SportlandSports
-{
-    public class Startup
-    {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+namespace SportlandSports {
+    public class Startup {
 
-        public Startup(IConfiguration config)
-        {
+        public Startup(IConfiguration config) {
             Configuration = config;
         }
 
         private IConfiguration Configuration { get; set; }
 
-
-        public void ConfigureServices(IServiceCollection services)
-        {
+        public void ConfigureServices(IServiceCollection services) {
             services.AddControllersWithViews();
-            services.AddDbContext<StoreDBContext>(opts =>
-            {
-                opts.UseSqlServer(Configuration["ConnectionStrings:KurtsStoreConnection"]);
+            services.AddDbContext<StoreDbContext>(opts => {
+                opts.UseSqlServer(
+                    Configuration["ConnectionStrings:SportlandSportsConnection"]);
             });
             services.AddScoped<IStoreRepository, EFStoreRepository>();
+            services.AddScoped<IOrderRepository, EFOrderRepository>();
             services.AddRazorPages();
             services.AddDistributedMemoryCache();
             services.AddSession();
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
             app.UseRouting();
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/Page{productPage:int}",
+                    new { Controller = "Home", action = "Index" });
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute($"catpage", "{category}/Page{productPage:int}", new { Controller = "Home", action = "Index" });
-                endpoints.MapControllerRoute($"page", "Page{productPage:int}", new { Controller = "Home", action = "Index", productPage = 1 });
-                endpoints.MapControllerRoute($"category", "{category}", new { Controller = "Home", action = "Index", productPage = 1 });
-                endpoints.MapControllerRoute($"pagination", "Products/Page{productPage}", new { Controller = "Home", action = "Index", productPage = 1 });
+                endpoints.MapControllerRoute("page", "Page{productPage:int}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+
+                endpoints.MapControllerRoute("category", "{category}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
+
+                endpoints.MapControllerRoute("pagination",
+                    "Products/Page{productPage}",
+                    new { Controller = "Home", action = "Index", productPage = 1 });
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
+
             SeedData.EnsurePopulated(app);
         }
     }

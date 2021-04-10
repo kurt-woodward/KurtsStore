@@ -2,19 +2,16 @@
 using System.Linq;
 using SportlandSports.Models;
 
-namespace SportlandSports.Components
-{
-    public class NavigationMenuViewComponent : ViewComponent
-    {
+namespace SportlandSports.Components {
+
+    public class NavigationMenuViewComponent : ViewComponent {
         private IStoreRepository repository;
 
-        public NavigationMenuViewComponent(IStoreRepository repo)
-        {
+        public NavigationMenuViewComponent(IStoreRepository repo) {
             repository = repo;
         }
 
-        public IViewComponentResult Invoke()
-        {
+        public IViewComponentResult Invoke() {
             ViewBag.SelectedCategory = RouteData?.Values["category"];
             return View(repository.Products
                 .Select(x => x.Category)

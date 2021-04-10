@@ -11,8 +11,8 @@ namespace SportlandSports.Tests
         public void Can_Add_New_Lines()
         {
             // Arrange - create some test products
-            Product p1 = new Product { ProductId = 1, Name = "P1" };
-            Product p2 = new Product { ProductId = 2, Name = "P2" };
+            Product p1 = new Product { ProductID = 1, Name = "P1" };
+            Product p2 = new Product { ProductID = 2, Name = "P2" };
 
             // Arrange - create a new cart
             Cart target = new Cart();
@@ -32,8 +32,8 @@ namespace SportlandSports.Tests
         public void Can_Add_Quantity_For_Existing_Lines()
         {
             // Arrange - create some test products
-            Product p1 = new Product { ProductId = 1, Name = "P1" };
-            Product p2 = new Product { ProductId = 2, Name = "P2" };
+            Product p1 = new Product { ProductID = 1, Name = "P1" };
+            Product p2 = new Product { ProductID = 2, Name = "P2" };
             // Arrange - create a new cart
             Cart target = new Cart();
 
@@ -41,7 +41,7 @@ namespace SportlandSports.Tests
             target.AddItem(p1, 1);
             target.AddItem(p2, 1);
             target.AddItem(p1, 10);
-            CartLine[] results = target.Lines.OrderBy(c => c.Product.ProductId).ToArray();
+            CartLine[] results = target.Lines.OrderBy(c => c.Product.ProductID).ToArray();
 
             // Assert
             Assert.Equal(2, results.Length);
@@ -53,9 +53,9 @@ namespace SportlandSports.Tests
         public void Can_Remove_Line()
         {
             // Arrange
-            Product p1 = new Product { ProductId = 1, Name = "P1" };
-            Product p2 = new Product { ProductId = 2, Name = "P2" };
-            Product p3 = new Product { ProductId = 3, Name = "P3" };
+            Product p1 = new Product { ProductID = 1, Name = "P1" };
+            Product p2 = new Product { ProductID = 2, Name = "P2" };
+            Product p3 = new Product { ProductID = 3, Name = "P3" };
 
             // Arrange - create a new cart
             Cart target = new Cart();
@@ -77,8 +77,8 @@ namespace SportlandSports.Tests
         public void Calculate_Cart_Total()
         {
             // Arrange - create some test products
-            Product p1 = new Product { ProductId = 1, Name = "P1", Price = 100M };
-            Product p2 = new Product { ProductId = 2, Name = "P2", Price = 50M };
+            Product p1 = new Product { ProductID = 1, Name = "P1", Price = 100M };
+            Product p2 = new Product { ProductID = 2, Name = "P2", Price = 50M };
 
             // Arrange - create a new cart
             Cart target = new Cart();
@@ -97,8 +97,8 @@ namespace SportlandSports.Tests
         public void Can_Clear_Contents()
         {
             // Arrange - create some test products
-            Product p1 = new Product { ProductId = 1, Name = "P1", Price = 100M };
-            Product p2 = new Product { ProductId = 2, Name = "P2", Price = 50M };
+            Product p1 = new Product { ProductID = 1, Name = "P1", Price = 100M };
+            Product p2 = new Product { ProductID = 2, Name = "P2", Price = 50M };
 
             // Arrange - create a new cart
             Cart target = new Cart();
