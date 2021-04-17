@@ -36,3 +36,16 @@ The purpose of this assignment is to demonstrate to the student how C# business 
 ![Screenshot 10](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_3A_Checkout_Complete.JPG "Screenshot 10")  
 ### Test Explorer Results  
 ![Screenshot 11](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_3A_Test_Explorer_Results.JPG "Screenshot 11")  
+## Chapter 10 Screenshots  
+### Admin Page  
+![Screenshot 12](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_4A_Admin_Page.JPG "Screenshot 12")  
+### Product Details  
+![Screenshot 13](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_4A_Product_Details.JPG "Screenshot 13")  
+### Product Edit  
+![Screenshot 14](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_4A_Product_Edit.JPG "Screenshot 14")
+### Product Create  
+![Screenshot 15](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_4A_Product_Create.JPG "Screenshot 15")
+### Product New Entry  
+![Screenshot 16](https://raw.githubusercontent.com/kurt-woodward/KurtsStore/master/Screenshots/ISTA_421_Lab_4A_Product_New_Line.JPG "Screenshot 16")
+### Test Explorer Results  
+No new tests created in this chapter.  
